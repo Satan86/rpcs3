@@ -226,10 +226,10 @@ namespace vk
 					{
 						shuffle_kernel = vk::get_compute_task<vk::cs_shuffle_32>();
 					}
-					else
+					/* else
 					{
 						fmt::throw_exception("Unreachable" HERE);
-					}
+					} */
 
 					vk::insert_buffer_memory_barrier(cmd, working_buffer->value, 0, task_length,
 						VK_PIPELINE_STAGE_TRANSFER_BIT, VK_PIPELINE_STAGE_COMPUTE_SHADER_BIT,
